@@ -1,5 +1,8 @@
-const isSameElements = function (array) {
-    return !array.some(item => item !== array[0]);
-};
+function isSameElements(array) {
+    for (let i=1; i<array.length; i++) {
+        if (array[i] !== array[0]) return false;
+    }
+    return true;
+}
 
 module.exports = isSameElements;
