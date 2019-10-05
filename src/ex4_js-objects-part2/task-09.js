@@ -1,11 +1,11 @@
 function addSubstrToStr(str, substr, index) {
   const words = str.split(' ');
-  let resultStr = '';
+  const resultWords = [];
   for (let i = 0; i < words.length; i++) {
-    resultStr += words[i] + ' ';
-    if (i === index) resultStr += substr + ' ';
+    resultWords.push(words[i]);
+    if (i === index) resultWords.push(...substr.split(' '));
   }
-  return resultStr.trimRight();
+  return resultWords.join(' ');
 }
 
 module.exports = addSubstrToStr;
