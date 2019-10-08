@@ -1,16 +1,16 @@
-let Calculator = {
+const Calculator = {
   current: 0,
   add(value) {
-    if (typeof value === "number") this.current += value;
+    if (!isNaN(value) && typeof value === "number") this.current += value;
   },
   subtract(value) {
-    if (typeof value === "number") this.current -= value;
+    if (!isNaN(value) && typeof value === "number") this.current -= value;
   },
   divide(value) {
-    if (typeof value === "number") this.current /= value;
+    if (!isNaN(value) && typeof value === "number") this.current /= value;
   },
   multiply(value) {
-    if (typeof value === "number") this.current *= value;
+    if (!isNaN(value) && typeof value === "number") this.current *= value;
   },
   reset() {
     this.current = 0;
