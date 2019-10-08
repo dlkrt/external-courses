@@ -1,23 +1,23 @@
-const Calculator = {
-  current: 0,
-  add(value) {
+const Calculator = (function() {
+  let current = 0;
+  function add(value) {
     if (!isNaN(value) && typeof value === "number") this.current += value;
-  },
-  subtract(value) {
+  }
+  function subtract(value) {
     if (!isNaN(value) && typeof value === "number") this.current -= value;
-  },
-  divide(value) {
+  }
+  function divide(value) {
     if (!isNaN(value) && typeof value === "number") this.current /= value;
-  },
-  multiply(value) {
+  }
+  function multiply(value) {
     if (!isNaN(value) && typeof value === "number") this.current *= value;
-  },
-  reset() {
-    this.current = 0;
-  },
-  getResult() {
+  }
+  function reset() {
+    current = 0;
+  }
+  function getResult() {
     return this.current;
   }
-};
+}());
 
-module.exports = (new Calculator);
+module.exports = Calculator;
