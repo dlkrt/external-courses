@@ -1,5 +1,5 @@
 function searchPropInProto(prop, obj) {
-  return (obj.__proto__.hasOwnProperty(prop)) ? obj.__proto__[prop] : undefined;
+  return Object.getPrototypeOf(obj)[prop];
 }
 
 module.exports = searchPropInProto;
