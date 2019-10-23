@@ -1,0 +1,18 @@
+.solid {
+  border-style: solid;
+  font: 2em Verdana;
+  text-align: center;
+}
+
+.groove {
+  border-style: groove;
+  font-size: 25px;
+  color: #F09000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.outset {
+  border-style: outset;
+  background-color: rgb(212,312,10);
+}
+
