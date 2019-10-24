@@ -1,0 +1,21 @@
+th,td {
+    padding: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+tr:hover td {
+    background-color: rgb(178, 233, 248);
+}
+
+th {
+    text-transform: uppercase;
+    background-color: rgb(227,234,243);
+    padding: 5px;
+    font-weight: 900;
+    color: rgb(117,134,151);
+}
+
+td {
+    color: rgb(104, 120, 135);
+    font-weight: normal;
+}

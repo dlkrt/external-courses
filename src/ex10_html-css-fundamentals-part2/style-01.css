@@ -1,0 +1,7 @@
+img {
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    -webkit-mask-image: url("https://lab.iamvdo.me/css-svg-masks/alpha-mask.png");
+    -webkit-mask-size: 100px;
+}
