@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
 * {
     outline: 0;
     padding: 0;
@@ -153,4 +155,134 @@ header {
     font-size: 15px;
     font-weight: 300;
     line-height: 27px;
+}
+
+main {
+    width: 100%;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    height: auto;
+}
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-direction: column;
+}
+
+.main {
+    text-align: center;
+    padding-top: 260px;
+    width: 100%;
+    text-shadow: 1px 1px 8px rgba(1, 1, 1, 0.15);
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 58px;
+    text-transform: uppercase;
+    z-index: 1;
+    justify-self: stretch;
+}
+
+.main > .description {
+    position: relative;
+    top: -50px;
+    z-index: -1;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.15);
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.slider {
+    display: flex;
+    margin-top: 146px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 755px;
+    position: relative;
+}
+
+.slider > .slider__next {
+    background: url("slider_next.png");
+    width: 111px;
+    height: 241px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__img {
+    position: relative;
+}
+
+.like {
+    position: absolute;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color:rgba(255, 255, 0, 0.2);
+    width: 322px;
+    height: 65px;
+    border: 0;
+    left: 0;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like > svg {
+    padding-right: 12px;
+}
+
+#first-slide {
+    color: #ffffff;
+}
+
+#second-slide {
+    color: #cc9800;
+}
+
+.articles {
+    margin-top: 154px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.articles > article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #6d6e71;
+}
+
+.articles .content {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    word-break: break-word;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    width: 385px;
+}
+
+.articles .content > h1 {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 20px 0 28px 0;
+}
+
+.articles > article > svg {
+    padding-right: 35px;
 }
