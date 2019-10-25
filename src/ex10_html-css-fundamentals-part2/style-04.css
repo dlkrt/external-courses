@@ -124,7 +124,7 @@ header {
      line-height: 27px;
 }
 
-.menu li > a:hover, .menu li > a[selected="selected"] {
+.menu li > a:hover {
     color: #1faae2;
     position: relative;
     margin: 0;
