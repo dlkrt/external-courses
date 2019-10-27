@@ -1,0 +1,113 @@
+.ring-loader {
+    display: inline-block;
+    position: absolute;
+    left: calc((100% - 500px)/2);
+    top: calc((40% - 500px)/2);
+}
+.ring-loader:after {
+    content: " ";
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 20px solid #292a26;
+    border-color: #292a26 transparent #2c2d27 transparent;
+    animation: ring-loader 1s linear infinite;
+}
+@keyframes ring-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ball {
+    display: inline-block;
+    position: absolute;
+    left: calc((100% - 200px)/2);
+    top: calc((90% - 200px)/2);
+}
+
+.ball:after {
+    content: " ";
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 1px;
+    border-radius: 50%;
+    background-color: black;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards;
+    animation: ball 1.5s ease infinite;
+    animation-direction: alternate, normal;
+}
+
+@keyframes ball {
+    0% {
+        transform:  translate(-400px,0)  scaleX(1.00) scaleY(1.00) ;
+    }
+    30% {
+        transform:  translate(-200px,400px)  scaleX(1.05) scaleY(0.75) ;
+    }
+    60% {
+        transform:  translate(0,0)  scaleX(1.00) scaleY(1.00) ;
+    }
+    80% {
+        transform:  translate(200px,400px)  scaleX(1.05) scaleY(0.75) ;
+    }
+    100% {
+        transform:  translate(400px,0)  scaleX(1.00) scaleY(1.00);
+    }
+}
+
+
+.step {
+    display: inline-block;
+    position: absolute;
+    left: calc((100% - 200px)/2);
+    top: calc(100% - 800px);
+}
+
+.step:after {
+    content: " ";
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 1px;
+    border-radius: 50%;
+    background-color: #a89c2b;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation: step 5s ease infinite;
+    animation-direction: alternate, normal;
+}
+
+@keyframes step {
+    0% {
+        border-radius: 50%;
+        background: linear-gradient(to right, #ffffff, #4c78be);
+    }
+    15% {
+        border-radius: 0;
+    }
+    30% {
+        background: linear-gradient(to left, #2d9a45, #ffffff);
+    }
+    45% {
+        transform:  scaleY(1.5) scaleY(1.5) skewX(20deg);
+    }
+    65% {
+        transform: rotate(180deg);
+    }
+    80% {
+        background: linear-gradient(to right, #ececec, #ff0012);
+    }
+    100% {
+        border-radius: 50%;
+        transform: scaleX(1.00) scaleY(1.00);
+    }
+}
