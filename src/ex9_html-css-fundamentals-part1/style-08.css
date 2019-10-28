@@ -9,11 +9,12 @@ main {
 }
 
 header {
-    width: 100%;
+    flex: 1 1 100%;
     background: lightblue;
 }
 
 section {
+    flex-direction: row;
     flex: 3;
     background: lightgreen;
 }
