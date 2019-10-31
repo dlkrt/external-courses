@@ -24,7 +24,9 @@ header,footer {
     padding: 14px 14px 14px 21px;
 }
 
-.header__main-menu > svg {
+.header__main-menu {
+    cursor: pointer;
+    background: url("main-menu.svg") no-repeat center;
     width: 35px;
     height: 35px;
 }
@@ -51,7 +53,7 @@ header,footer {
     border-radius: 4px;
     background-color: #FFFFFF;
     position: relative;
-    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
     font-size: 18px;
     line-height: 21px;
     border-color: #FFFFFF;
@@ -83,6 +85,7 @@ header,footer {
 }
 
 .header-right .user-menu {
+    cursor: pointer;
     height: 24px;
     width: 24px;
     background: url("user-menu.svg") no-repeat center;
