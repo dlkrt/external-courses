@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    outline: none;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto',sans-serif;
+}
+
+header,footer {
+    background-color: #0067A3;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 14px 14px 14px 21px;
+}
+
+.header__main-menu > svg {
+    width: 35px;
+    height: 35px;
+}
+
+.header-left .logo {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+    padding-left: 16px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 285px;
+}
+
+.header-right .new_list {
+    padding-left: 30px;
+    width: 181px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    border-color: #FFFFFF;
+    outline: none;
+}
+
+.header-right .new_list:before {
+    content: '';
+    background: url("button-plus.svg") no-repeat;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 9px;
+    top: calc(50% - 12px);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right .user-avatar {
+    height: 40px;
+    width: 40px;
+    background: #FFFFFF url("profile.svg") no-repeat;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.header-right .user-menu {
+    height: 24px;
+    width: 24px;
+    background: url("user-menu.svg") no-repeat center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.tasks {
+    display: flex;
+    padding: 17px 0 17px 67px;
+    justify-content: space-between;
+    color: #FFFFFF;
+    min-width: 330px;
+}
+
+.author {
+    padding-right: 24px;
+}
