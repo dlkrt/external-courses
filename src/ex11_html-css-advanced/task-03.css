@@ -2,7 +2,6 @@
 
 * {
     margin: 0;
-    outline: none;
     padding: 0;
     border: none;
     font-family: 'Roboto',sans-serif;
@@ -10,33 +9,31 @@
 
 header,footer {
     background-color: #0067A3;
-}
-
-.wrap {
+    min-height: 55px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-left {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 14px 14px 14px 21px;
+    margin-left: 21px;
 }
 
 .header__main-menu {
     cursor: pointer;
     background: url("main-menu.svg") no-repeat center;
-    width: 35px;
-    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
 }
 
 .header-left .logo {
-    display: inline-block;
     font-size: 28px;
     line-height: 33px;
     color: #FFFFFF;
-    padding-left: 16px;
+    margin-left: 16px;
 }
 
 .header-right {
@@ -47,8 +44,8 @@ header,footer {
 }
 
 .header-right .new_list {
-    padding-left: 30px;
-    width: 181px;
+    padding-left: 46px;
+    padding-right: 20px;
     height: 33px;
     border-radius: 4px;
     background-color: #FFFFFF;
@@ -57,7 +54,6 @@ header,footer {
     font-size: 18px;
     line-height: 21px;
     border-color: #FFFFFF;
-    outline: none;
 }
 
 .header-right .new_list:before {
@@ -94,9 +90,6 @@ header,footer {
 footer {
     position: fixed;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     font-size: 18px;
     line-height: 21px;
@@ -105,12 +98,11 @@ footer {
 
 .tasks {
     display: flex;
-    padding: 17px 0 17px 67px;
+    margin-left: 67px;
     justify-content: space-between;
-    color: #FFFFFF;
     min-width: 330px;
 }
 
 .author {
-    padding-right: 24px;
+    margin-right: 24px;
 }
