@@ -27,7 +27,7 @@ left.onclick = function () {
     id = pictures.length - 1;
   }
   domAnimate();
-  document.getElementsByClassName('slider')[0].style = `background-image: url("${pictures[id]}")`;
+  elem.style('slider')[0].style = `background-image: url("${pictures[id]}")`;
 };
 
 right.click();
