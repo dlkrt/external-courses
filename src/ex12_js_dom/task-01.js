@@ -1,4 +1,4 @@
-let pictures = ['./asset/pic1.jpg','./asset/pic2.jpg','./asset/pic3.jpg'];
+let pictures = ['./asset/pic1.jpg', './asset/pic2.jpg', './asset/pic3.jpg'];
 let id = -1,
   elem = document.getElementsByClassName('slider')[0];
 
