@@ -1,0 +1,54 @@
+form {
+    display: grid;
+    grid-template-columns: 30% 20% 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+input,textarea,#submit {
+    border-radius: 5px;
+    padding: 5px;
+    grid-column: 2 / 3;
+    border: 1px solid black;
+}
+
+label {
+    align-content: center;
+    grid-column: 1 / 2;
+    box-sizing: border-box;
+    text-align: right;
+    align-self: center;
+    justify-self: end;
+}
+
+.arrow-left {
+    align-items: center;
+    margin-left: 20px;
+    grid-column: 3 / 4;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 12pt;
+    background: #ff2600;
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+    font-family: Verdana, Arial, sans-serif;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input:hover + div{
+    opacity: 1;
+}
+
+.arrow-left::before {
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 15px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 10px solid #ff2600;
+    left: -10px;
+    position: absolute;
+}

@@ -1,0 +1,34 @@
+.btn {
+    margin: 50px;
+    display: block;
+    border-radius: 12px;
+    background: rgb(173,173,173);
+    background: linear-gradient(360deg, rgba(173,173,173,1) 0%, rgba(226,226,226,1) 49%);
+    width: 230px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 16pt;
+    color: rgb(85, 85, 85);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: -1px 2px 6px 0px #6f6f6f, 0px 0 0 6px #d6d6d6, 0px 0px 0 8px white, 0 0 0 10px #616161, 0 0 16px 5px #000000;
+    position: relative;
+}
+
+.btn::before {
+    color: rgb(154, 154, 154);
+    position: absolute;
+    font-size: 27pt;
+    content: '\2605';
+    top: 0;
+    left: 15px;
+}
+
+.btn:after {
+    color: rgb(154, 154, 154);
+    content: '\2605';
+    top: 0;
+    font-size: 27pt;
+    position: absolute;
+    right: 15px;
+}
