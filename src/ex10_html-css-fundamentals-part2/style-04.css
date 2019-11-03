@@ -10,12 +10,9 @@
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-header {
+.header {
     border-bottom: 1px solid #eceef4;
     max-width: 1200px;
     width: 100%;
@@ -52,6 +49,11 @@ header {
     position: relative;
 }
 
+.icons li:hover > svg {
+    fill: #1faae2;
+}
+
+
 .icons li:first-child {
     border: 0;
     padding-left: 0;
@@ -81,10 +83,10 @@ header {
 
 .tooltip:after {
     content: '';
-    display:flex;
-    width:0;
-    height:0;
-    position:absolute;
+    display: flex;
+    width: 0;
+    height: 0;
+    position: absolute;
     border-width: 10px 10px 0 10px;
     border-style: solid;
     border-color: #d4d4d5 transparent transparent transparent;
@@ -116,11 +118,11 @@ header {
 }
 
 .menu a {
-     text-decoration: none;
-     color: #6d6e71;
-     font-size: 13px;
-     font-weight: 700;
-     line-height: 27px;
+    text-decoration: none;
+    color: #6d6e71;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 27px;
 }
 
 .menu li > a:hover {
@@ -131,9 +133,9 @@ header {
 
 .menu li > a:hover::before {
     content: '';
-    width:0;
-    height:0;
-    position:absolute;
+    width: 0;
+    height: 0;
+    position: absolute;
     border-width: 0 17px 8px 17px;
     border-style: solid;
     border-color: transparent transparent #1faae2 transparent;
@@ -156,10 +158,9 @@ header {
     line-height: 27px;
 }
 
-main {
+.wrap {
     width: 100%;
-    background-image: url("background.png");
-    background-repeat: no-repeat;
+    background: url("background.png") no-repeat top;
     background-size: contain;
     align-items: center;
     height: auto;
@@ -213,15 +214,20 @@ main {
 
 .slider > .slider__next {
     background: url("slider_next.png");
-    width: 111px;
-    height: 241px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    flex: 1;
 }
 
 .slider__img {
+    flex: 2;
     position: relative;
+}
+
+.slider__img img {
+    height: 100%;
 }
 
 .like {
@@ -229,15 +235,16 @@ main {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    background-color:rgba(255, 255, 0, 0.2);
+    background-color: rgba(255, 255, 0, 0.2);
     width: 322px;
     height: 65px;
     border: 0;
     left: 0;
-    bottom: 5px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .like > svg {
@@ -275,6 +282,7 @@ main {
     font-weight: 300;
     line-height: 24px;
     width: 365px;
+    flex: 3;
 }
 
 .articles .content > h1 {
@@ -285,4 +293,5 @@ main {
 
 .articles > article > svg {
     padding-right: 35px;
+    flex: 1;
 }

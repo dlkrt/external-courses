@@ -1,5 +1,6 @@
 .toggleMenu {
     display: none;
+    cursor: pointer;
 }
 
 .logo-mobile {
@@ -8,7 +9,7 @@
 
 
 @media all and (max-width: 1023px) {
-    header {
+    .header {
         margin: 0;
     }
 
