@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header, footer {
+.header, .footer {
     background-color: #0067A3;
     min-height: 55px;
     display: flex;
@@ -15,7 +15,7 @@ header, footer {
     align-items: center;
 }
 
-.header__left {
+.header__title {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -29,21 +29,21 @@ header, footer {
     min-height: 35px;
 }
 
-.header__left .logo {
+.header__title .header__logo {
     font-size: 28px;
     line-height: 33px;
     color: #FFFFFF;
     margin-left: 16px;
 }
 
-.header__right {
+.header__profile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 285px;
 }
 
-.header__right .new_list {
+.header__profile .new_list {
     padding-left: 46px;
     padding-right: 20px;
     height: 33px;
@@ -56,7 +56,7 @@ header, footer {
     border-color: #FFFFFF;
 }
 
-.header__right .new_list:before {
+.header__profile .new_list:before {
     content: '';
     background: url("./assets-task02/button-plus.svg") no-repeat;
     position: absolute;
@@ -74,7 +74,7 @@ header, footer {
     cursor: pointer;
 }
 
-.header__right .user-avatar {
+.header__profile .user-avatar {
     height: 40px;
     width: 40px;
     background: #FFFFFF url("./assets-task02/profile.svg") no-repeat;
@@ -82,7 +82,7 @@ header, footer {
     border-radius: 50%;
 }
 
-.header__right .user-menu {
+.header__profile .user-menu {
     height: 24px;
     width: 24px;
     margin-right: 5px;
@@ -90,7 +90,7 @@ header, footer {
     transition: 0.5s;
 }
 
-.profile .content {
+.profile .user-menu__content {
     cursor: auto;
     display: none;
     list-style: none;
@@ -105,27 +105,27 @@ header, footer {
     padding: 10px 2px 10px 2px;
 }
 
-.profile .content a {
+.profile .user-menu__content a {
     color: black;
     text-decoration: none;
 }
 
-.profile .content a:hover {
+.profile .user-menu__content a:hover {
     text-decoration: underline;
 }
 
-.profile .content li {
+.profile .user-menu__content li {
     padding: 10px;
     border-radius: 3px;
     line-height: 2em;
 }
 
-.profile .content li:hover {
+.profile .user-menu__content li:hover {
     background: #73c0ff;
     transition: 0.5s;
 }
 
-footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -134,13 +134,13 @@ footer {
     color: #FFFFFF;
 }
 
-.tasks {
+.footer__tasks {
     display: flex;
     margin-left: 67px;
     justify-content: space-between;
     min-width: 330px;
 }
 
-.author {
+.footer__author {
     margin-right: 24px;
 }
