@@ -91,7 +91,7 @@
         font-weight: 300;
     }
 
-    .main {
+    .legend-text {
         margin: 0 auto;
         padding-top: 133px;
         text-shadow: 1px 1px 4px rgba(1, 1, 1, 0.15);
@@ -101,15 +101,16 @@
         max-width: 458px;
     }
 
-    .main > .description {
+    .legend-text > .description {
         text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.15);
         color: #ffffff;
         font-size: 22px;
         font-weight: 300;
         left: -35px;
+        bottom: 40px;
     }
 
-    .main > .description > svg {
+    .legend-text > .description > img {
         width: 44px;
         height: 46px;
     }
@@ -118,7 +119,7 @@
         display: none;
     }
 
-    .container {
+    .legend {
         max-width: 700px;
     }
 
@@ -152,7 +153,7 @@
         padding-bottom: 11px;
     }
 
-    .articles > article > svg {
+    .articles > article > img {
         padding-right: 20px;
         flex: 1;
     }

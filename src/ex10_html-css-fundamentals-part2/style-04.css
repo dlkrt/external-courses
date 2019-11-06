@@ -34,36 +34,37 @@ body {
     align-items: center;
 }
 
-.contract {
+.header-top .contact {
     justify-content: center;
     align-items: center;
     align-self: flex-end;
 }
 
-.icons li {
+.contact-icons li {
     display: inline-block;
     fill: #6d6e71;
     border-left: 1px solid #bcbec3;
     padding: 0 24px 0 24px;
     cursor: pointer;
     position: relative;
+    height: inherit;
 }
 
-.icons li:hover > svg {
+.contact-icons li:hover > svg {
     fill: #1faae2;
 }
 
 
-.icons li:first-child {
+.contact-icons li:first-child {
     border: 0;
     padding-left: 0;
 }
 
-.icons li:last-child {
+.contact-icons li:last-child {
     padding-right: 24px;
 }
 
-.tooltip:before {
+.location-tooltip:before {
     border-radius: 8px;
     width: 223px;
     height: 48px;
@@ -81,7 +82,7 @@ body {
     align-items: center;
 }
 
-.tooltip:after {
+.location-tooltip:after {
     content: '';
     display: flex;
     width: 0;
@@ -158,7 +159,7 @@ body {
     line-height: 27px;
 }
 
-.wrap {
+.main-container {
     width: 100%;
     background: url("background.png") no-repeat top;
     background-size: contain;
@@ -167,7 +168,7 @@ body {
 }
 
 
-.container {
+.legend {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -176,7 +177,7 @@ body {
     flex-direction: column;
 }
 
-.main {
+.legend-text {
     text-align: center;
     padding-top: 260px;
     width: 100%;
@@ -190,9 +191,9 @@ body {
     justify-self: stretch;
 }
 
-.main > .description {
+.legend-text > .description {
     position: relative;
-    bottom: 40px;
+    bottom: 25px;
     left: 43px;
     z-index: -1;
     font-family: "Open Sans Condensed", sans-serif;
@@ -291,7 +292,7 @@ body {
     padding: 20px 0 28px 0;
 }
 
-.articles > article > svg {
+.articles > article > img {
     padding-right: 35px;
-    flex: 1;
+    max-height: 130px;
 }
