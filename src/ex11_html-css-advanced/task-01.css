@@ -1,14 +1,14 @@
 .ring-loader {
     display: inline-block;
     position: absolute;
-    left: calc((100% - 500px)/2);
-    top: calc((40% - 500px)/2);
+    left: calc((100% - 200px)/2);
+    top: calc((40% - 200px)/2);
 }
 .ring-loader:after {
-    content: " ";
+    content: "";
     display: block;
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
     margin: 1px;
     border-radius: 50%;
     border: 20px solid #292a26;
@@ -32,10 +32,10 @@
 }
 
 .ball:after {
-    content: " ";
+    content: "";
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin: 1px;
     border-radius: 50%;
     background-color: black;
@@ -68,15 +68,15 @@
 .step {
     display: inline-block;
     position: absolute;
-    left: calc((100% - 200px)/2);
-    top: calc(100% - 800px);
+    left: calc((100% - 50px)/2);
+    top: calc(100% - 200px);
 }
 
 .step:after {
-    content: " ";
+    content: "";
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     margin: 1px;
     border-radius: 50%;
     background-color: #a89c2b;
