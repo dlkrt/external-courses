@@ -1,13 +1,8 @@
-th,td {
-    padding: 20px;
-    font-family: Verdana, sans-serif;
-}
-
-tr:hover td {
+.row:hover {
     background-color: rgb(178, 233, 248);
 }
 
-th {
+.content {
     text-transform: uppercase;
     background-color: rgb(227,234,243);
     padding: 5px;
@@ -15,7 +10,6 @@ th {
     color: rgb(117,134,151);
 }
 
-td {
+.row > * {
     color: rgb(104, 120, 135);
-    font-weight: normal;
 }
