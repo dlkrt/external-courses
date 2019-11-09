@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task-02</title>
+  <link rel="stylesheet" href="task-01.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header class="header">
+    <div class="header__title">
+      <div class="header__main-menu">
+      </div>
+      <div class="header__logo">
+        Awesome Kanban Board
+      </div>
+    </div>
+    <div class="header__profile">
+      <button class="new_list">Create new list</button>
+      <div class="profile" id="profile">
+        <div class="user-avatar"></div>
+        <div class="user-menu"></div>
+        <ul class="user-menu__content">
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="boards">
+    <div class="board-theme backlog">
+      <div class="board-theme-title">
+        <span class="theme-title">Backlog</span>
+        <button class="board-menu-button"></button>
+      </div>
+      <ul class="issues-list">
+
+      </ul>
+      <button class="btn-issue-add">
+        Add card
+      </button>
+    </div>
+    <div class="board-theme ready">
+      <div class="board-theme-title">
+        <span class="theme-title">Ready</span>
+        <button class="board-menu-button"></button>
+      </div>
+      <ul class="issues-list">
+
+      </ul>
+      <button class="btn-issue-add">
+        Add card
+      </button>
+    </div>
+    <div class="board-theme inProgress">
+      <div class="board-theme-title">
+        <span class="theme-title">In progress</span>
+        <button class="board-menu-button"></button>
+      </div>
+      <ul class="issues-list">
+
+      </ul>
+      <button class="btn-issue-add">
+        Add card
+      </button>
+    </div>
+    <div class="board-theme finished">
+      <div class="board-theme-title">
+        <span class="theme-title">Finished</span>
+        <button class="board-menu-button"></button>
+      </div>
+      <ul class="board-issues">
+        <li>awdas</li>
+      </ul>
+      <button class="btn-issue-add">
+        Add card
+      </button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__tasks">
+      <span>Active tasks: &lt;N&gt;</span>
+      <span>Finished tasks: &lt;M&gt;</span>
+    </div>
+    <div class="footer__author">
+      Kanban board by Danil, 2019
+    </div>
+  </footer>
+  <script src="task-01.js"></script>
+</body>
+</html>
