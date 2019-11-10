@@ -2,7 +2,7 @@
     background-color: rgb(178, 233, 248);
 }
 
-.content {
+#table-title * {
     text-transform: uppercase;
     background-color: rgb(227,234,243);
     padding: 5px;
