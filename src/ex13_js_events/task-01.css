@@ -150,6 +150,7 @@
     border-radius: 10px;
     padding: 12px;
     max-width: 20vw;
+    position: relative;
 }
 
 .board-theme-title {
@@ -187,6 +188,31 @@
     cursor: pointer;
 }
 
+.btn-issue-add:hover {
+    color: #0067A3;
+}
+
+.dropdown-list-issues {
+    list-style: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 82%;
+    min-width: calc(100% - 25px);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-list-issues li {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    word-break: normal;
+}
+
+.dropdown-list-issues li:hover {
+    color: #007dc1;
+}
+
 .btn-issue-add:disabled {
     color: #cbd0d0;
     cursor: default;
@@ -209,6 +235,7 @@
 .theme-title {
     font-size: 18px;
     line-height: 21px;
+    text-transform: capitalize;
 }
 
 
