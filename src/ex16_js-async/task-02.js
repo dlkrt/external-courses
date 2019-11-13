@@ -11,7 +11,6 @@ function debounce(func, delay) {
 }
 
 function updateData() {
-  console.log(arguments);
   document.getElementById('response').innerText = document.getElementById('searchInput').value;
 }
 
