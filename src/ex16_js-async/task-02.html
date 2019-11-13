@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task-02 Debounce</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: sans-serif;
+      font-size: 15pt;
+    }
+    #form {
+      display: flex;
+      min-width: 460px;
+      justify-content: space-between;
+    }
+    #searchInput {
+      font-size: 15pt;
+    }
+    #response {
+      margin-top: 100px;
+      color: #2d9a45;
+    }
+  </style>
+</head>
+<body>
+  <form id="form" name="form" action="#">
+    <label for="searchInput">Your search text here:</label>
+    <input type="search" name="text" id="searchInput">
+  </form>
+  <div id="response">Your search text will be here with 500 ms delay</div>
+  <script src="task-02.js"></script>
+</body>
+</html>
