@@ -2,7 +2,7 @@ const pictures = ['./asset/pic1.jpg', './asset/pic2.jpg', './asset/pic3.jpg'];
 let id = -1,
   elem = document.getElementsByClassName('slider')[0];
 
-function domAnimate() {
+function makeAnimate() {
   elem.animate([
     {'transform': 'scale(0)'},
     {'transform': 'scale(1)'}
@@ -11,23 +11,22 @@ function domAnimate() {
   })
 }
 
-right.onclick = function () {
+nextBtn.onclick = function () {
   id += 1;
   if (id >= pictures.length) {
     id = 0;
   }
   domAnimate();
   elem.style = `background-image: url("${pictures[id]}")`;
-
 };
 
-left.onclick = function () {
+backBtn.onclick = function () {
   id -= 1;
   if (id < 0) {
     id = pictures.length - 1;
   }
-  domAnimate();
+  makeAnimate();
   elem.style = `background-image: url("${pictures[id]}")`;
 };
 
-right.click();
+nextBtn.click();
