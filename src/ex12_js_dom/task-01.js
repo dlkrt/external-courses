@@ -16,7 +16,7 @@ nextBtn.onclick = function () {
   if (id >= pictures.length) {
     id = 0;
   }
-  domAnimate();
+  makeAnimate();
   elem.style = `background-image: url("${pictures[id]}")`;
 };
 

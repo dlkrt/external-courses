@@ -17,13 +17,14 @@ const menuItems = [
 ];
 
 profile.onclick = function () {
-  const arrow = document.querySelector('.profile .user-menu'),
-    menu = document.querySelector('.user-menu__content');
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
+  const arrow = document.querySelector('.profile .user-menu');
+  let menu = document.querySelector('.user-menu__content');
+  if (menu) {
     arrow.style.transform = 'rotate(0)';
-    while (menu.firstChild) menu.removeChild(menu.firstChild);
+    menu.remove();
   } else {
+    menu = document.createElement('ul');
+    menu.className = 'user-menu__content';
     menuItems.forEach(item => {
       const newItem = document.createElement('li'),
         a = document.createElement('a');
@@ -33,7 +34,7 @@ profile.onclick = function () {
       newItem.appendChild(a);
       menu.appendChild(newItem);
     });
-    menu.style.display = 'block';
+    profile.appendChild(menu);
     arrow.style.transform = 'rotate(180deg)';
   }
 };
