@@ -56,7 +56,7 @@ function loadBoards() {
 function loadIssues() {
   dataMock.forEach((board, i) => {
     const listIssues = document.getElementById(board.title.toLowerCase());
-    while (listIssues.firstChild) listIssues.firstChild.remove();
+    listIssues.innerHTML = '';
     listIssues.className = 'board-issues';
     listIssues.id = board.title.toLowerCase();
     board.issues.forEach(issue => {
