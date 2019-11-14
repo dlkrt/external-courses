@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task-04</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style-04.css">
+  <link rel="stylesheet" href="style-04-responsive.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+  <header class="header">
+    <section class="header-top">
+      <div class="logo">
+        <img src="logo.png" alt="logo">
+      </div>
+      <div class="contact">
+        <ul class="contact-icons">
+          <li>
+            <svg width="28" height="34" version="1.1" viewBox="0 0 28 29" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="m3.4126 0.60588c0.71287-0.71801 1.8687-0.71801 2.5815 0l3.8723 5.2002c0.59187 0.88024 0.71287 1.882 0 2.6l-1.5799 1.5912c1.1715 1.5852 2.5783 3.3142 4.1614 4.9088 1.7897 1.8025 3.7817 3.4422 5.5722 4.7876l1.527-1.5378c0.71287-0.71801 1.7073-0.59601 2.5815 0l5.1631 3.9003c0.86522 0.6025 0.71275 1.882 0 2.5997l-2.5816 2.6c-1.4256 1.436-3.2802 0.97548-5.163 0 0 0-5.6986-3.2221-10.577-8.1356-4.589-4.6218-8.1388-10.714-8.1388-10.714-0.74005-2.0501-1.4257-3.7642 0-5.2002zm2.5028 9.1793 2.0735-2.0884c0.45359-0.45679 0.37658-1.0941 0-1.6544l-2.4642-3.3093c-0.45359-0.61091-1.1891-0.45679-1.6428 0l-1.6427 1.6547c-0.64421 0.6106-0.458 2.0336-0.11742 2.7183 1.5244 2.925 4.9104 7.4294 7.7446 10.4 3.2681 3.5699 10.971 8.4503 10.971 8.4503 0.59474 0.31483 2.2452 0.33884 2.6988-0.11825l1.6427-1.6547c0.33927-0.5723 0.49174-1.2362 0-1.6544l-3.2855-2.4819c-0.55635-0.37927-1.189-0.45679-1.6427 0l-2.0242 2.0386c-0.47696-0.33854-8.0812-5.3719-12.311-12.3z"></path>
+              </g>
+            </svg>
+
+          </li>
+          <li data-tooltip="Saudi Arabia . Alreyadah" class="location-tooltip">
+            <svg width="28" height="34" version="1.1" viewBox="0 0 25 34" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="m12.46 33.995c-2.0745 0.01084-12.477-15.917-12.477-21.247 0-7.0405 5.5863-12.748 12.477-12.748s12.477 5.7072 12.477 12.748c0 5.2588-10.435 21.258-12.477 21.247zm0-31.87c-5.7424 0-10.398 4.7562-10.398 10.623 0 4.4418 8.669 18.069 10.398 18.06 1.7017 0.00902 10.398-13.677 10.398-18.06 0-5.8669-4.6552-10.623-10.398-10.623zm0 15.935c-2.8713 0-5.1988-2.3783-5.1988-5.3118 0-2.9334 2.3276-5.3114 5.1988-5.3114 2.8713 0 5.199 2.378 5.199 5.3114 0 2.9335-2.3277 5.3118-5.199 5.3118zm0-8.4987c-1.7227 0-3.1194 1.427-3.1194 3.1869 0 1.7603 1.3967 3.187 3.1194 3.187 1.7228 0 3.1194-1.4267 3.1194-3.187 0-1.7599-1.3965-3.1869-3.1194-3.1869z"></path>
+              </g>
+            </svg>
+
+          </li>
+          <li>
+            <svg width="28" height="34" version="1.1" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="m26.33 24.271h-22.019c-2.0268 0-3.6697-1.6292-3.6697-3.6384v-16.372c0-2.0092 1.6429-3.6381 3.6697-3.6381h22.019c2.0268 0 3.6697 1.6288 3.6697 3.6381v16.372c0 2.0092-1.6429 3.6384-3.6697 3.6384zm-21.101-21.83 10.092 8.6977 10.092-8.6977zm22.936 1.819c0-0.52305-0.22614-0.99139-0.58305-1.3233l-12.261 10.419-12.261-10.419c-0.35691 0.33195-0.58305 0.80029-0.58305 1.3233v16.372c0 1.0045 0.82159 1.819 1.8349 1.819h22.019c1.0134 0 1.8349-0.81457 1.8349-1.819z"></path>
+              </g>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <nav class="menu">
+      <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+      <label for="menu" class="toggleMenu">
+        <span class="fa fa-bars"></span>
+      </label>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">What about ISAMA</a></li>
+        <li><a href="#">What we do?</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Excellent Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="logo-mobile">
+        logo
+      </div>
+      <div class="search">
+        <img src="search-icon.svg" alt="icon">
+        <form>
+          <input name="search" placeholder="Type your search words" type="text">
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <div class="legend">
+      <section class="legend-text">
+        LET’S DRAW SOME ARTS<br>
+        <span class="description">
+          <img src="description.svg" alt="&">
+          make your business much better
+        </span>
+      </section>
+      <section class="slider">
+        <div class="slider__img">
+          <img src="img-1.png" alt="pic">
+          <button id="first-slide" class="like">
+            <svg  width="32" height="29" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 29">
+              <defs></defs>
+              <g>
+                <g>
+                  <path d="M29.19564,16.50462c-0.12112,0.12017 -11.05261,10.92517 -11.05261,10.92517c-1.18256,1.16892 -3.09551,1.16892 -4.27806,0c0,0 -9.98354,-9.86812 -11.0532,-10.92517c-3.74103,-3.69918 -3.74103,-9.69465 0,-13.39291c3.63111,-3.59015 9.43196,-3.66513 13.19182,-0.28767c3.76046,-3.37746 9.56237,-3.30248 13.19206,0.28767c3.74103,3.69827 3.74103,9.69374 0,13.39291zM27.76871,4.52067c-2.84255,-2.81104 -7.41565,-2.90943 -10.40888,-0.2213l-1.35624,1.21776l-1.35565,-1.21776c-2.99323,-2.68813 -7.56538,-2.58974 -10.40924,0.2213c-2.95019,2.91541 -2.95019,7.65897 0,10.57397l11.05249,10.92528c0.39172,0.3892 1.03259,0.3892 1.42503,0l11.05249,-10.92528c2.95043,-2.915 2.95043,-7.65857 0,-10.57397zM9.75535,5.84371c0,0.27592 -0.22352,0.49914 -0.49996,0.49914h-0.00107c-1.79374,0 -3.24893,1.45294 -3.24893,3.24422v0.00091c0,0.27592 -0.22352,0.49914 -0.49996,0.49914c-0.27657,0 -0.50008,-0.22323 -0.50008,-0.49914c0,-2.34209 1.90151,-4.24057 4.246,-4.2424c0.00215,0 0.00215,-0.00101 0.00405,-0.00101c0.27645,0 0.49996,0.22333 0.49996,0.49914z"
+                        fill="#adff63" fill-opacity="1"></path>
+                </g>
+              </g>
+            </svg>
+            Like
+          </button>
+        </div>
+        <div class="slider__img">
+          <button id="second-slide" class="like">
+            <svg width="32" height="29" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 29">
+              <g>
+                <g>
+                  <path d="M29.19567,16.50462c-0.12124,0.12017 -11.05261,10.92517 -11.05261,10.92517c-1.18256,1.16892 -3.09551,1.16892 -4.27818,0c0,0 -9.98342,-9.86812 -11.05309,-10.92517c-3.74103,-3.69918 -3.74103,-9.69465 0,-13.39291c3.631,-3.59015 9.43196,-3.66513 13.19182,-0.28767c3.76034,-3.37746 9.56225,-3.30248 13.19206,0.28767c3.74103,3.69827 3.74103,9.69374 0,13.39291zM27.76873,4.52067c-2.84255,-2.81104 -7.41577,-2.90943 -10.409,-0.2213l-1.35612,1.21776l-1.35565,-1.21776c-2.99323,-2.68813 -7.56538,-2.58974 -10.40924,0.2213c-2.95019,2.91541 -2.95019,7.65897 0,10.57397l11.05249,10.92528c0.3916,0.3892 1.03247,0.3892 1.42503,0l11.05249,-10.92528c2.95043,-2.915 2.95043,-7.65857 0,-10.57397zM9.75537,5.84371c0,0.27592 -0.22352,0.49914 -0.49996,0.49914h-0.00107c-1.79374,0 -3.24893,1.45294 -3.24893,3.24422v0.00091c0,0.27592 -0.22352,0.49914 -0.50008,0.49914c-0.27645,0 -0.49996,-0.22323 -0.49996,-0.49914c0,-2.34209 1.90151,-4.24057 4.24588,-4.2424c0.00226,0 0.00226,-0.00101 0.00417,-0.00101c0.27645,0 0.49996,0.22333 0.49996,0.49914z"
+                        fill="#cc9800" fill-opacity="1"></path>
+                </g>
+              </g>
+            </svg>
+            Like
+          </button>
+          <img src="img-2.png" alt="pic">
+        </div>
+        <div class="slider__next">
+          <svg  width="23" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1"
+               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 40">
+            <g>
+              <g>
+                <path d="M1.00232,5.02411l15.06329,14.96958v0l-15.26022,15.16554v0l0.00072,0.00091c-0.49877,0.51373 -0.80609,1.21249 -0.80609,1.98289c0,1.57798 1.28734,2.85714 2.87497,2.85714c0.77522,0 1.47831,-0.3055 1.99533,-0.8012l0.00083,0.00091v0l17.25006,-17.14296v0l-0.00083,-0.00071c0.54204,-0.51961 0.87976,-1.24856 0.87976,-2.05625c0,-0.00193 -0.00024,-0.00405 -0.00024,-0.00628c0,-0.00213 0.00024,-0.00405 0.00024,-0.00618c0,-0.80768 -0.33772,-1.53633 -0.87976,-2.05604l0.00083,-0.00091v0l-17.25006,-17.14306v0l-0.00739,0.0075c-0.51641,-0.49195 -1.21677,-0.79492 -1.98877,-0.79492c-1.58763,0 -2.87497,1.27906 -2.87497,2.85714c0,0.86686 0.38898,1.64283 1.00231,2.1669z"
+                      fill="#d4d4d4" fill-opacity="1"></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </section>
+      <section class="articles">
+        <article>
+          <img src="lamp@1.5x.png" alt="lamp">
+          <div class="content">
+            <h1>What about ISAMA</h1>
+            ISAMA is a marketing foundation located in Riyadh built on the talent of creation that leads to a modern
+            concept of professionalism. At ISAMA we believe even if you are good at what you do, you have a great product
+            or you provide an excellent service. We still can present you a little better to the world, creating your full
+            identity, provides you with your marketing plans, design your website, print your publications, design your
+            logo’s and offices. Simply we give your business the perfect image.
+          </div>
+        </article>
+        <article>
+          <img src="tree@1.5x.png" alt="tree">
+          <div class="content">
+            <h1>Why we exist</h1>
+            Reaching customer satisfaction through providing them with cutting-edge technologies that give clients access
+            to a wide range of tools, ensuring efficient and results-oriented communication solutions, which grant them a
+            special character that distinguishes them from the others in the business.
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

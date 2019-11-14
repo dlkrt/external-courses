@@ -1,0 +1,160 @@
+.toggleMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+
+@media all and (max-width: 1023px) {
+    .header {
+        margin: 0;
+    }
+
+    .header-top {
+        display: none;
+    }
+
+    .menu label.toggleMenu {
+        display: block;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .menu label.toggleMenu .fa {
+        color: #3687c4;
+        font-size: 30px;
+    }
+
+    input.toggleMenu:checked ~ ul {
+        justify-self: flex-start;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input.toggleMenu ~ ul > li {
+        background-color: white;
+        padding: 20px;
+        border: 0;
+        z-index: 5;
+    }
+
+    .menu li > a:hover::before {
+        border: 0;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .menu {
+        height: 50px;
+        margin-top: 0;
+        padding-top: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-mobile {
+        display: flex;
+        margin-left: 100px;
+        justify-content: center;
+        align-items: center;
+        background: url("mobile-logo.png") no-repeat center center;
+        height: inherit;
+        width: 269px;
+        color: #3687c4;
+        font-size: 27px;
+        font-weight: 400;
+    }
+
+    .search {
+        padding-right: 20px;
+        width: 150px;
+    }
+
+    .search > svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .search > form > input {
+        padding-left: 5px;
+        width: 130px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .legend-text {
+        margin: 0 auto;
+        padding-top: 133px;
+        text-shadow: 1px 1px 4px rgba(1, 1, 1, 0.15);
+        color: #ffffff;
+        font-size: 29px;
+        font-weight: 700;
+        max-width: 458px;
+    }
+
+    .legend-text > .description {
+        text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.15);
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 300;
+        left: -35px;
+        bottom: 40px;
+    }
+
+    .legend-text > .description > img {
+        width: 44px;
+        height: 46px;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .legend {
+        max-width: 700px;
+    }
+
+    .articles {
+        margin: 90px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .articles > article {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .articles .content {
+        word-wrap: break-word;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+        flex: 5;
+    }
+
+    .articles .content > h1 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        padding-bottom: 11px;
+    }
+
+    .articles > article > img {
+        padding-right: 20px;
+        flex: 1;
+    }
+}
