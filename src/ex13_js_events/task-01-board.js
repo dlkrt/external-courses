@@ -110,7 +110,6 @@ function loadIssues() {
 }
 
 function saveData() {
-  console.log(dataMock);
   localStorage.setItem('data', JSON.stringify(dataMock));
 }
 
@@ -131,7 +130,6 @@ function resetButtons() {
 function showDropdown(e) {
   e.target.removeEventListener('click', showDropdown);
   const siblingIndex = e.target.parentElement.getAttribute('data-id') - 1;
-
   const dropdown = document.createElement('ul');
   dropdown.className = 'dropdown-list-issues';
   dataMock[siblingIndex].issues.forEach(issue => {
