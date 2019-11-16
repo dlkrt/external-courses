@@ -1,4 +1,41 @@
-let dataMock = JSON.parse(localStorage.getItem('data'));
+let dataMock = JSON.parse(localStorage.getItem('data')) || [
+  {
+    title: "backlog",
+    issues: [
+      {
+        id: 0,
+        name: 'bugfix'
+      },
+      {
+        id: 1,
+        name: 'fix errors'
+      }
+    ]
+  },
+  {
+    title: 'ready',
+    issues: [
+      {
+        id: 2,
+        name: 'sprint bugfix'
+      }
+    ]
+  },
+  {
+    title: 'in progress',
+    issues: [
+      {
+        id: 4,
+        name: 'made a feature'
+      }
+    ]
+  },
+  {
+    title: 'finished',
+    issues: [
+    ]
+  }
+];
 
 let maxId = 0;
 window.onload = loadBoards;
@@ -73,6 +110,7 @@ function loadIssues() {
 }
 
 function saveData() {
+  console.log(dataMock);
   localStorage.setItem('data', JSON.stringify(dataMock));
 }
 
