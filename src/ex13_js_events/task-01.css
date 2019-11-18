@@ -195,9 +195,9 @@
     list-style: none;
     position: absolute;
     background-color: #FFFFFF;
-    top: 82%;
+    top: 100%;
     min-width: calc(100% - 25px);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
 

@@ -77,6 +77,7 @@ function loadBoards() {
         });
         backlog.appendChild(newTask);
         event.target.remove();
+        resetButtons();
         saveData();
       }
     }
@@ -92,14 +93,13 @@ function loadBoards() {
 }
 
 function loadIssues() {
-  dataMock.forEach((board, i) => {
+  dataMock.forEach((board) => {
     const listIssues = document.getElementById(board.title.toLowerCase());
     listIssues.innerHTML = '';
     listIssues.className = 'board-issues';
     listIssues.id = board.title.toLowerCase();
     board.issues.forEach(issue => {
       if (issue.id > maxId) maxId = issue.id;
-
       const newTask = document.createElement('li');
       newTask.id = issue.id;
       newTask.innerText = issue.name;
@@ -147,7 +147,7 @@ function selectIssueFromDropdown(e) {
   const selfIndex = e.target.parentElement.parentElement.getAttribute('data-id');
   dataMock = dataMock.map((board) => ({
     title: board.title.toLowerCase(),
-    issues: board.issues.filter((issue) => issue.id !== Number(e.target.id))
+    issues: board.issues.filter((issue) => Number(issue.id) !== Number(e.target.id))
   }));
   dataMock[selfIndex].issues.push({
     id: e.target.id,
