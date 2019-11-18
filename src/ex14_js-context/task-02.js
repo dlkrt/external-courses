@@ -6,7 +6,7 @@ function Hangman(word) {
 }
 
 Hangman.prototype.guess = function (letter) {
-  if (this.word.indexOf(letter) !== -1 && !this.mask.includes(letter)) {
+  if (this.word.includes(letter) && !this.mask.includes(letter)) {
     this.mask = this.mask.split('').map((maskLetter, i) => {
       if (this.word[i] === letter) return letter;
       return maskLetter;
