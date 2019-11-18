@@ -32,13 +32,11 @@ let dataMock = JSON.parse(localStorage.getItem('data')) || [
   },
   {
     title: 'finished',
-    issues: [
-    ]
+    issues: []
   }
 ];
 
 let maxId = 0;
-window.onload = loadBoards;
 
 function loadBoards() {
   dataMock.forEach((item, i) => {
@@ -59,7 +57,7 @@ function loadBoards() {
     boards.appendChild(boardTheme);
   });
 
-  document.getElementById('backlogBtn').onclick = function (e) {
+  document.getElementById('backlogBtn').addEventListener('click', function (e) {
     const backlogInput = document.createElement('input');
     backlogInput.className = 'input-backlog-task';
     backlogInput.placeholder = 'Your task here...';
@@ -67,6 +65,8 @@ function loadBoards() {
     function addBacklogTask(event) {
       if (!event.target.value) return;
       if (event.key === 'Enter' || event.type === 'focusout') {
+        event.target.removeEventListener('focusout', addBacklogTask);
+        event.target.removeEventListener('keypress', addBacklogTask);
         const newTask = document.createElement('li');
         newTask.innerText = event.target.value;
         ++maxId;
@@ -84,8 +84,9 @@ function loadBoards() {
     backlogInput.addEventListener('keypress', addBacklogTask);
     backlogInput.addEventListener('focusout', addBacklogTask);
     e.target.parentElement.insertBefore(backlogInput, backlogBtn);
+    backlogInput.focus();
     resetButtons();
-  };
+  });
 
   loadIssues();
 }
@@ -144,14 +145,10 @@ function showDropdown(e) {
 
 function selectIssueFromDropdown(e) {
   const selfIndex = e.target.parentElement.parentElement.getAttribute('data-id');
-  dataMock = dataMock.map((board) => {
-    return {
-      title: board.title.toLowerCase(),
-      issues: board.issues.filter((issue) => {
-        return issue.id != e.target.id;
-      })
-    }
-  }).slice();
+  dataMock = dataMock.map((board) => ({
+    title: board.title.toLowerCase(),
+    issues: board.issues.filter((issue) => issue.id !== Number(e.target.id))
+  }));
   dataMock[selfIndex].issues.push({
     id: e.target.id,
     name: e.target.textContent
@@ -161,3 +158,5 @@ function selectIssueFromDropdown(e) {
   resetButtons();
   saveData();
 }
+
+window.onload = loadBoards;
