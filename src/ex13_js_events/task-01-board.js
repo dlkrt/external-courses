@@ -57,31 +57,33 @@ function loadBoards() {
     boards.appendChild(boardTheme);
   });
 
+  function addBacklogTask(event) {
+    if (event.key === 'Enter' || event.type === 'focusout') {
+      if (!event.target.value) {
+        event.target.remove();
+        return;
+      }
+      event.target.removeEventListener('focusout', addBacklogTask);
+      event.target.removeEventListener('keypress', addBacklogTask);
+      const newTask = document.createElement('li');
+      newTask.innerText = event.target.value;
+      ++maxId;
+      newTask.id = maxId;
+      dataMock[0].issues.push({
+        id: maxId,
+        name: event.target.value
+      });
+      backlog.appendChild(newTask);
+      event.target.remove();
+      resetButtons();
+      saveData();
+    }
+  }
+
   document.getElementById('backlogBtn').addEventListener('click', function (e) {
     const backlogInput = document.createElement('input');
     backlogInput.className = 'input-backlog-task';
     backlogInput.placeholder = 'Your task here...';
-
-    function addBacklogTask(event) {
-      if (!event.target.value) return;
-      if (event.key === 'Enter' || event.type === 'focusout') {
-        event.target.removeEventListener('focusout', addBacklogTask);
-        event.target.removeEventListener('keypress', addBacklogTask);
-        const newTask = document.createElement('li');
-        newTask.innerText = event.target.value;
-        ++maxId;
-        newTask.id = maxId;
-        dataMock[0].issues.push({
-          id: maxId,
-          name: event.target.value
-        });
-        backlog.appendChild(newTask);
-        event.target.remove();
-        resetButtons();
-        saveData();
-      }
-    }
-
     backlogInput.addEventListener('keypress', addBacklogTask);
     backlogInput.addEventListener('focusout', addBacklogTask);
     e.target.parentElement.insertBefore(backlogInput, backlogBtn);
@@ -99,7 +101,9 @@ function loadIssues() {
     listIssues.className = 'board-issues';
     listIssues.id = board.title.toLowerCase();
     board.issues.forEach(issue => {
-      if (issue.id > maxId) maxId = issue.id;
+      if (issue.id > maxId) {
+        maxId = issue.id;
+      }
       const newTask = document.createElement('li');
       newTask.id = issue.id;
       newTask.innerText = issue.name;

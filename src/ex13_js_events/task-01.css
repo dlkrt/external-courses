@@ -14,10 +14,9 @@
 }
 
 .header, .footer {
-    flex-basis: 6vh;
     background-color: #0067A3;
-    min-height: 55px;
     display: flex;
+    flex-basis: 7.5vh;
     justify-content: space-between;
     align-items: center;
 }
@@ -134,7 +133,7 @@
 .boards {
     background-color: #0079BF;
     display: flex;
-    flex-basis: 88vh;
+    flex-basis: 85vh;
     flex-flow: row nowrap;
     justify-content: space-around;
     overflow-x: auto;
