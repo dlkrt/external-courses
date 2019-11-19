@@ -14,8 +14,7 @@ function myFetch(url, options = {method: 'get'}) {
     };
     oReq.onerror = function() {
       reject({
-        status: this.status,
-        statusText: this.statusText
+        statusText: 'Error loading data'
       });
     };
     oReq.send(options.body || '');
@@ -23,9 +22,9 @@ function myFetch(url, options = {method: 'get'}) {
   return new Promise(fetchData);
 }
 
-form.onsubmit = function (e) {
+document.querySelector('.searchable-form').addEventListener('submit',function (e) {
   e.preventDefault();
-  const data = new FormData(document.getElementById('form'));
+  const data = new FormData(document.querySelector('.searchable-form'));
   myFetch('http://httpbin.org/post',{
     method: 'post',
     body: data
@@ -34,4 +33,4 @@ form.onsubmit = function (e) {
   }).catch(err => {
     alert('Error: '+err.statusText)
   });
-};
+});
