@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task-01 Kanban Board</title>
+  <link rel="stylesheet" href="task-01.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__title">
+        <div class="header__main-menu">
+        </div>
+        <div class="header__logo">
+          Awesome Kanban Board
+        </div>
+      </div>
+      <div class="header__profile">
+        <button class="new_list">Create new list</button>
+        <div class="profile">
+          <div class="user-avatar"></div>
+          <div class="user-menu"></div>
+          <div class="dropdown-user-menu"></div>
+        </div>
+      </div>
+    </header>
+    <main class="boards" id="boards">
+    </main>
+    <footer class="footer">
+      <div class="footer__tasks">
+        <span>Active tasks: &lt;N&gt;</span>
+        <span>Finished tasks: &lt;M&gt;</span>
+      </div>
+      <div class="footer__author">
+        Kanban board by Danil, 2019
+      </div>
+    </footer>
+  </div>
+  <script src="task-01-menu.js"></script>
+  <script src="task-01-board.js"></script>
+</body>
+</html>
