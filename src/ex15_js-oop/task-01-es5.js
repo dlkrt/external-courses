@@ -13,21 +13,12 @@ Sweetness.prototype.getWeight = function () {
 };
 
 function Chocolate(sweetName, weight) {
-  Sweetness.bind(this);
-  this.typeName = 'chocolate';
-  this.sweetName = sweetName;
-  this.weight = weight;
+  return new Sweetness('chocolate', sweetName, weight);
 }
 
 function Candy(sweetName, weight) {
-  Sweetness.bind(this);
-  this.typeName = 'candy';
-  this.sweetName = sweetName;
-  this.weight = weight;
+  return new Sweetness('candy', sweetName, weight);
 }
-
-Chocolate.prototype = Sweetness.prototype;
-Candy.prototype = Sweetness.prototype;
 
 function Gift(gift) {
   this.giftItems = gift;
@@ -43,10 +34,9 @@ Gift.prototype.getWeight = function () {
 
 Gift.prototype.sortByWeight = function () {
   const sortedGift = this.giftItems.slice();
-  sortedGift.sort(function (a, b) {
+  return sortedGift.sort(function (a, b) {
     return a.getWeight() - b.getWeight();
   });
-  return sortedGift;
 };
 
 Gift.prototype.searchByName = function (sweetName) {

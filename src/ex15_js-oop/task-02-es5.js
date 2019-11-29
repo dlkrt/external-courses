@@ -28,21 +28,12 @@ ElectricApp.prototype.isEnabled = function () {
 };
 
 function Computer(power, name) {
-  ElectricApp.bind(this);
-  this.electricType = 'computer';
-  this.electricName = name;
-  this.power = power;
+  return new ElectricApp(power, 'computer', name);
 }
 
 function Washer(power, name) {
-  ElectricApp.bind(this);
-  this.electricType = 'washer';
-  this.electricName = name;
-  this.power = power;
+  return new ElectricApp(power,'washer', name);
 }
-
-Computer.prototype = ElectricApp.prototype;
-Washer.prototype = ElectricApp.prototype;
 
 function Room(ElectricApps) {
   this.ElectricApps = ElectricApps;
