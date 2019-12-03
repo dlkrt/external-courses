@@ -1,7 +1,7 @@
-import {createBoard} from "../../components/main/board.js";
+import {createBoard, Board} from "../../components/main/board.js";
 
-let dataMock = JSON.parse(localStorage.getItem('data')) || [
-  {
+let dataMock = JSON.parse(localStorage.getItem('data')) ||
+  [{
     title: "backlog",
     issues: [
       {
@@ -51,4 +51,4 @@ dataMock.forEach((item, i) => {
   Main.appendChild(createBoard(item.title, i));
 });
 
-export {Main}
+export {Main, Board}

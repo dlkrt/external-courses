@@ -1,0 +1,22 @@
+.footer {
+    background-color: #0067A3;
+    display: flex;
+    flex-basis: 7.5vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer__tasks {
+    display: flex;
+    margin-left: 67px;
+    justify-content: space-between;
+    min-width: 330px;
+}
+
+.footer__author {
+    margin-right: 24px;
+}
