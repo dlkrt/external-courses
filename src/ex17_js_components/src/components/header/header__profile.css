@@ -1,0 +1,14 @@
+.header__profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 285px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}

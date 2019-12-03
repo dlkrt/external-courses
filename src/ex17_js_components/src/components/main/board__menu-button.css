@@ -1,0 +1,6 @@
+.board-menu-button {
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/three-dots.svg") no-repeat center;
+    cursor: pointer;
+}

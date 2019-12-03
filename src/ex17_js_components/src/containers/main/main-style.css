@@ -1,0 +1,9 @@
+.boards {
+    background-color: #0079BF;
+    display: flex;
+    flex-basis: 85vh;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    overflow-x: auto;
+    align-items: flex-start;
+}

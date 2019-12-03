@@ -1,0 +1,13 @@
+.board-issues {
+    list-style: none;
+}
+
+.board-issues li {
+    display: block;
+    margin-top: 15px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    word-wrap: break-word;
+}

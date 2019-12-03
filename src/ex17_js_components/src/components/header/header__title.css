@@ -1,0 +1,19 @@
+.header__title {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header__title .header__logo {
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+    margin-left: 16px;
+}
+
+.header__main-menu {
+    cursor: pointer;
+    background: url("../../assets/main-menu.svg") no-repeat center;
+    min-width: 35px;
+    min-height: 35px;
+}

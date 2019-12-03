@@ -1,24 +1,14 @@
-import { HeaderLogo } from "../../components/header__title.js";
+import { HeaderTitle } from "../../components/header/header__title.js";
+import { HeaderProfile } from "../../components/header/header__profile.js"
 
-class Header extends HTMLDataElement {
-  constructor() {
-    super();
+const Header = document.createElement('header');
+Header.classList.add('header');
+Header.appendChild(HeaderTitle);
+Header.appendChild(HeaderProfile);
 
-    const shadow = this.attachShadow({mode: 'open'});
-    const header = document.createElement('header');
-    const style = document.createElement('style');
-    style.textContent = `
-      .header {
-        background-color: #0067A3;
-        display: flex;
-        flex-basis: 7.5vh;
-        justify-content: space-between;
-        align-items: center;
-      }`;
-    shadow.appendChild(style);
-    header.appendChild(new HeaderLogo('Awesome Kanban Board'));
-    shadow.appendChild(header);
-  }
-}
+const HeaderStyle = document.createElement('link');
+HeaderStyle.setAttribute('rel', 'stylesheet');
+HeaderStyle.setAttribute('href', './src/containers/header/header-style.css');
+document.getElementsByTagName('head')[0].appendChild(HeaderStyle);
 
-export { Header };
+export {Header}

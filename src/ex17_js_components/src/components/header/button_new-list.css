@@ -1,0 +1,22 @@
+.new_list {
+    padding-left: 46px;
+    padding-right: 20px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 21px;
+    border-color: #FFFFFF;
+}
+
+.new_list:before {
+    content: '';
+    background: url("../../assets/button-plus.svg") no-repeat;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 9px;
+    top: calc(50% - 12px);
+}
